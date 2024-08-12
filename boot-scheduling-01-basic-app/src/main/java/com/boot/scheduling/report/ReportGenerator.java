@@ -23,7 +23,7 @@ public class ReportGenerator {
 	//@Scheduled(initialDelayString = "5000", fixedDelayString = "3000")
 	//@Scheduled(initialDelayString = "3000", fixedRateString = "6000")
 	//@Scheduled(fixedDelay = 5000) : if initialDelay is not specify then the scheduled method trigger for execution along with app startup.
-	@Scheduled(initialDelay = 5000)
+	@Scheduled(initialDelay = 5000, fixedDelay = 3000)
 	public void generateSalesReport() {
 		/*
 		try {
@@ -33,5 +33,12 @@ public class ReportGenerator {
 		}
 		*/
 		System.out.println("Sales Report Generated On : " + new Date());
+		System.out.println("Task-1 Thread Hashcode : " + Thread.currentThread().hashCode());
+	}
+	
+	@Scheduled(initialDelay = 5000, fixedDelay = 4500)
+	public void generateEmployeeReport() {
+		System.out.println("Employee Report Generated On : "+new Date());
+		System.out.println("Task-2 Thread Hashcode : " + Thread.currentThread().hashCode());
 	}
 }
