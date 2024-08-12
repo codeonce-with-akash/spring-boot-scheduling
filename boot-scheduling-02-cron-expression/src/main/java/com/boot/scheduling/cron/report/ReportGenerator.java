@@ -8,12 +8,12 @@ import org.springframework.stereotype.Component;
 /*
  * CRON expression is 6* expression
  * 
- * |	*	seconds of the minute 	(0-59)					
- * |	*	minute of the hour		(0-59)				
- * |	*	hour of the day			(0-23)				
- * |	*	date of the month		(1-31)				
- * |	*	month of the year		(1-12)				
- * |	*	week day name	 		(SUN-SAT)
+ * |	*	seconds of the minute	- 	(0-59)					
+ * |	*	minute of the hour		-	(0-59)				
+ * |	*	hour of the day			-	(0-23)				
+ * |	*	date of the month		-	(1-31)				
+ * |	*	month of the year		-	(1-12)				
+ * |	*	week day name			-	(SUN-SAT)
  */																							
 
 @Component("report")
